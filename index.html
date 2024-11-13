@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width"> <!-- , initial-scale=1.0 -->
+		<title>House For Rent</title>
+
+		<link rel="stylesheet" href="styles/homepa.css" media="screen, print">
+
+		<script type="text/javascript" src="scripts/jquery-3.7.1.min.js"></script>
+		<script type="text/javascript" src="scripts/homepa.js"></script>
+		
+	</head>
+	<body>
+		<main>
+			<p id="WebBanner">HOUSE FOR RENT</p>
+
+			<!-- Photos preview section. -->
+			<div id="PhotoDetailInfo">
+				<div class="PDIAllFlexboxItems PDIAFlexboxItem1">
+					<!-- Change the source in Photo preview area, also change
+					the value of currentImageIndex variable to match with
+					pre-define image source. This allow the button move next
+					and move previous image working correctly. -->
+					<img id="PhotoPreview" src="imgs/homepa3.jpg" />
+				</div>
+				
+				<div class="PDIAllFlexboxItems PDIAFlexboxItem2">
+					<p id="PhotoDesText"></p>
+				</div>
+				
+			</div>
+
+			<!-- Photo navigation section. -->
+			<div id="PhotoNavigationArea">
+				<!-- Play, pause rewind or forward... -->
+				<div id="PNAAllFlexboxItems PNAFlexboxItem1">
+					<input type="button" class="NavButton" id="PrevBut" value="   <   ">
+ 				</div>
+				<div id="PNAAllFlexboxItems PNAFlexboxItem2">
+					<input type="button" class="NavButton" id="NextBut" value="   >   ">
+				</div>
+				<div id="PNAAllFlexboxItems PNAFlexboxItem3">
+					<input type="button" class="NavButton" id="ToggleSlideBut" value="Run Slide Show">
+				</div>
+			</div>
+
+			<p id="TellUserToClickOnPhoto">Click on the:</p>
+			<ul id="HowToPreviewPhoto">
+				<li><span class="ImportantPoint">Left arrow ( < )</span> button to move to the previous preview photo.</li>
+				<li><span class="ImportantPoint">Right arrow ( > )</span> button to move to the next preview photo.</li>
+				<li><span class="ImportantPoint">Run Slide Show</span> button to toggle between Slide show of photos and manual click on specific photo.</li>
+				<li>Below photos thumbnail to preview the clicked photo and its description.</li>
+			</ul>
+		
+			<!-- Photo collection. -->
+			<div id="PhotoCollection">
+				<div class="PCAllFlexItems PCFlexItems1">
+					<img class="PhotoThumbnails PTPano" src="imgs/homepa1.jpg" alt="Eagle view from the second floor, front house to an internal living area of Borey Vimean Phnom Penh (BVPP) Project No 9.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems2">
+					<img class="PhotoThumbnails PTVertical" src="imgs/homepa2.jpg" alt="Located at the corner of the street, easy for you do business or has some plenty of space for parking.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems3">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa3.jpg" alt="Corner, wide parking space, wide street and located in the center of an area, provide comfortable situation for you to live and doing business.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems4">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa4.jpg" alt="View from back to the front house along the road. Locate at the corner of the street.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems5">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa5.jpg" alt="View from the side of the house. Additional space available at the back of the house.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems6">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa6.jpg" alt="Ten meters wide of the road along the house which is ease of transportation within the living area.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems7">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa7.jpg" alt="Wide porch on the first floor is the place for you to relax when you stay at home.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems8">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa8.jpg" alt="Located in the center of living area and has many services provided near your location.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems9">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa9.jpg" alt="A blocked of shop house has many type of small business waiting to provided a services for you.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems10">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa10.jpg" alt="Looking at the back direction of the house, the road is very wide and has difference type of shops.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems11">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa11.jpg" alt="Eight meters wide of the road in front of the house.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems12">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa12.jpg" alt="Security service provided 24 by 7 (with a small amount of monthly payment with Borey).">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems13">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa13.jpg" alt="Wide guest room at the ground floor, provide a comfortable living condition.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems14">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa14.jpg"  alt="Curtain setup at the family room (first floor), provide a comfortable living condition and personal privacy.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems15">
+					<img class="PhotoThumbnails PTVertical" src="imgs/homepa15.jpg" alt="Wide space of rest room. Water and electricity is provided 24 by 7.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems16">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa16.jpg" alt="Entertaining room at the 2nd floor.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems17">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa17.jpg" alt="Two rooms are available on the 2nd floor.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems18">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa18.jpg" alt="Beautiful ladder and sturdy handrail provide as a secure tool to protect your family members when move up or down to a difference floor.">
+					<p class="TextDesForPrint"></p>
+				</div>
+
+				<div class="PCAllFlexItems PCFlexItems19">
+					<img class="PhotoThumbnails PTHorizontal" src="imgs/homepa19.jpg" alt="One large area of kitchen and additional space behind the house.">
+					<p class="TextDesForPrint"></p>
+				</div>
+				
+			</div>
+		</main>
+
+		<!-- Footer section. -->
+		<footer id="FooterArea">
+			<div class="FAAllFlexboxItems FAFlexboxItem1">
+				<p id="InfoTitle">Information</p>
+				<ou>
+					<li><a href="https://www.google.com/maps/@11.7381055,104.9747341,3a,75y,80.19h,95.83t/data=!3m6!1e1!3m4!1sFHGjvv4amO04rJ7yulLBog!2e0!7i13312!8i6656?authuser=0&coh=205409&entry=ttu&g_ep=EgoyMDI0MTAyMC4xIKXMDSoASAFQAw%3D%3D" target="_blank" title="Please click this link to view this house in Goolge Street view in a new windows.">No 71, Street 18 corner street 10.</a></li>
+					<li><a href="https://maps.app.goo.gl/CWUf1uX3JUrnaKUM7" target="_blank" title="Please click this link to view this house in Google Map view in a new windows.">Borey Vimean Phnom Penh (BVPP), Project No 9.</a></li>
+					<li>National Road No 6A, Prek Anhchanh Commune, Mukampol District, Kandal Province.</li>
+					<li>Home dimension: 4.2 meters by 14 meters.</li>
+					<li>Four living rooms, 1 kitchen, 1 guest room, 5 rest rooms and 2 porchs.</li>
+					<li>Located at the corner of the street. Easy for doing business.</li>
+					<li>Just 3.5 kilometers from Prek Tamak bridge.</li>
+				</ou>
+			</div>
+			<div class="FAAllFlexboxItems FAFlexboxItem2">
+				<p id="ContactTitle">Contact</p>
+				<img id="ContactTelegramQRCode" src="imgs/contact/srqrcode.jpg" alt="You can use telegrame to contact via below phone number.">
+				<p id="HP">H/P: <a href="https://t.me/+85512786565" title="Click this link to add this telegram contact into your telegram application." target="_blank">(855)-12 78 65 65</a> <span><img id="TlgLogo" src="imgs/contact/telegramLogo.gif" alt="You can contact this number via telegram."></span></p>
+				<p id="Email">Email: <a href="mailto:bunmonyrod@gmail.com" title="Click this link to open a new compose message.">bunmonyrod@gmail.com</a></p>
+			</div>
+			<div class="FAAllFlexboxItems FAFlexboxItem3">
+				<p id="ShareTitle">Share</p>
+				<input type="button" class="ShareButton" id="PrintButton" value="Print..." title="Click this button to open Print dialog box and adjust printer setting before printing."><br/><br/>
+				<input type="button" class="ShareButton" id="LinkButton" value="Copy Link" title="Click this button to copy the websit URL to the clipboard and paste in another application.">
+			</div>
+			
+		</footer>
+	</body>
+</html>

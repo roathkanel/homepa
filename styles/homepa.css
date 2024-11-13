@@ -1,0 +1,1948 @@
+/* Main CSS style. */
+
+/*
+Reset the page to the default setting.
+*/
+@media screen {
+    /* Reset browser setting to the default value. */
+    html, body, div, span, object, iframe, h1, h2,
+    h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+    address, big, cite, code, del, dfn, em, img, ins, 
+    kbd, q, s, samp, small, strike, strong, sub, sup,
+    tt, var, b, u, u, center,dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend, table, caption, tbody,
+    tfoot, thead, tr, th, td, article, aside, canvas, 
+    details, embed, figure, figcaption, footer, header, 
+    hgroup, menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+    }
+
+    article, aside, figcaption, figure, footer, header, 
+    hgroup, menu, nav, section {
+        display: block;
+    }
+
+    body {
+        line-height: 1.2;
+    }
+
+    ol {
+        padding-left: 1.4em;
+        list-style: decimal;
+    }
+
+    ul {
+        padding-left: 1.4em;
+        list-style: square;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+}
+
+/* ------------------------------------------------------------------------
+Style sheet for website display on:
+- TV (landscape).
+- Large monitor (landscape). 
+- Laptop 15.6 inch (landscape).
+------------------------------------------------------------------------ */
+@media only screen and (min-width: 1367px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-width: 1367px;
+        background-color:#FFF8F1;
+
+    }
+
+    #WebBanner {
+        /* margin-top: 20px; */
+        margin-bottom: 20px;
+        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 105px;
+        text-align: center;
+        letter-spacing: 11px;
+        color: #F48313;
+        text-shadow: 4px 4px 8px black;
+
+        background-color:darkgray;
+
+    }
+    
+    /* Style of flex container for the preview image. 
+    and the photo description text. */
+    #PhotoDetailInfo {
+        /* background-color:blue; */
+
+        /* Make the div display flex in order to arrange photo into the middle of 
+        the page. */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 53%;
+        /* This below setting make the div of an image and text stay at the 
+        center of the webpage. */
+        margin: 0 auto;
+        
+    }
+
+    /* Setting apply to all flex box items. */
+    .PDIAllFlexboxItems {
+        width: 100%;
+        /* Align both image and text at the center of the div tag. */
+        text-align:center;
+    }
+
+    /* Setting apply to flex box item 1. */
+    .PDIAFlexboxItem1 {
+        margin-bottom: 10px;
+    }
+
+    /* Setting apply to flex box item 2, photo description area. */
+    .PDIAFlexboxItem2 {
+        margin-top: 5px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+        
+        /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size:larger;
+        background-color: rgba(244, 131, 19,.3);
+        color:black;
+
+        margin-bottom: 20px;
+    }
+
+    #PhotoPreview {
+        /* border: 5px solid rgba(169, 167, 165,.8); */
+        box-shadow: 6px 6px 5px gray;
+    }
+
+    #PhotoNavigationArea {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-bottom: 20px;
+        
+    }
+
+    /* .PNAAllFlexboxItems {
+        
+    } */
+
+    /* .PNAFlexboxItemN { 
+
+    } */
+
+    .NavButton, #SlideShowButton, #PrintButton, #LinkButton {
+        margin-right:10px;
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: white;
+        border: 1px solid rgba(244, 131, 19,.6);
+
+        color: rgba(244, 131, 19,1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+
+        cursor: pointer;
+    }
+
+    /* Change apperance when mouse move over. */
+    .NavButton:hover {
+        background-color: rgba(244, 131, 19,.4);
+        
+        color:black;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+    }
+
+    /* Appearance of the button when it is clicked. */
+    .ButtonDown {
+        color: white !important;
+        background-color: darkgray !important;
+        border: none;
+
+    }
+
+    /* Appaerance of the toggle slide show button when user click and active. */
+    .ToggleSlideButActive {
+        background-color: blue;
+        color: white;
+        border: none;
+    }
+
+    #TellUserToClickOnPhoto {
+        width: 53%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 10px;
+        /* text-align: center; */
+        font-style: italic;
+        text-decoration: underline;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+    }
+
+    #HowToPreviewPhoto{
+        width: 53%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 15px;
+        /* font-style: italic; */
+        font-size:12pt;
+
+        list-style-type: disc;
+        
+    }
+
+    .ImportantPoint {
+        font-weight: bold;
+        color: rgba(244, 131, 19,1);
+    }
+
+    #PhotoCollection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 53%;
+        height: 350px;
+        overflow: auto;
+
+        background-color: rgba(169, 167, 165,.6);
+        margin: 0 auto;
+        align-items: center; /* Center item in horizontal alignment. */
+        justify-content: center; /* Center item in vertical alignment. */
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    /* Hide text description of photo for printer friendly. */
+    .TextDesForPrint {
+        display: none;
+    }
+
+    .PCAllFlexItems {
+        margin: 10px;
+    }
+
+    .PhotoThumbnails {
+        border: 3px solid white;
+    }
+
+    .PhotoThumbnails:hover {
+        border-color:#F48313;
+        cursor: pointer;
+
+        box-shadow: 8px 8px 8px rgb(97, 97, 255);
+    }
+
+    /* Thumbnails size of the photo with Panorama view. */
+    .PTPano {
+        width: 256px;
+        height: 90px;
+    }
+
+    /* Thumbnails size of the vertical photos. */
+    .PTVertical {
+        width: 128px;
+        height: 171px;
+    }
+
+    /* Thumnails size of the horizontal photos. */
+    .PTHorizontal {
+        width: 170px;
+        height: 128px;
+    }
+
+    #FooterArea {
+        margin-top: 20px;
+        /* Use pading left to make all content of footer located center of the page. */
+        padding-left: 290px;
+        height: 380px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        background-color:darkgray;
+
+    }
+
+    .FAAllFlexboxItems {
+        /* background-color: rgba(244, 131, 19,.3); */
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left:10px;
+
+        padding: 20px;
+        
+        width: 500px;
+        height: 330px;
+
+        /* border-radius: 10px; */
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2 {
+        border-right: 2px solid white;
+    }
+
+    #InfoTitle, #ContactTitle, #ShareTitle {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        letter-spacing: 1px;
+        font-size: x-large;
+        color: white;
+
+        padding-bottom: 10px;
+    }
+
+    .FAFlexboxItem1 {
+        width: 370px;
+    }
+
+    .FAFlexboxItem1 ou {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+
+    .FAFlexboxItem1 li {
+    
+
+        padding-left: 10px;
+        /* Use margin-bottom to achieve the line spacing purpose when working with
+        list item. */
+        margin-bottom: 5px;
+
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10.5pt;
+    }
+
+    /* Contat flex item. */
+    .FAFlexboxItem2 {
+        text-align: center;
+        width: 300px !important;
+    }
+
+    #ContactTelegramQRCode {
+        border: 3px solid white;
+        border-radius: 7px;
+        width: 170px;
+        height: auto;
+    }
+
+    #TlgLogo {
+        width: 25px;
+        height: 25px;
+        /* Use negative margin-bottom to bring down an image a little bit to make it in the
+        center of the text. */
+        margin-bottom: -6px;
+        /* Use filter drop shadown property to makea shadow for a transparent
+        images. */
+        filter: drop-shadow(0 0 5px white);
+    }
+
+    #HP, #Email {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10.5pt;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #PrintButton, #LinkButton {
+        width: 150px !important;
+    }
+}
+
+/* ---------------------------------------------------------------------------------- 
+CSS rules for:
+- Laptop 14 inch (landscape).
+------------------------------------------------------------------------------------*/
+@media only screen and (min-width: 1025px) and (max-width: 1366px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-width: 1025px;
+        background-color:#FFF8F1;
+
+    }
+
+    #WebBanner {
+        margin-bottom: 20px;
+        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 70pt;
+        text-align: center;
+        letter-spacing: 11px;
+        color: #F48313;
+        text-shadow: 4px 4px 8px black;
+
+        background-color:darkgray;
+
+    }
+    
+    /* Style of flex container for the preview image. 
+    and the photo description text. */
+    #PhotoDetailInfo {
+        /* background-color:blue; */
+
+        /* Make the div display flex in order to arrange photo into the middle of 
+        the page. */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 70%;
+        /* This below setting make the div of an image and text stay at the 
+        center of the webpage. */
+        margin: 0 auto;
+        
+    }
+
+    /* Setting apply to all flex box items. */
+    .PDIAllFlexboxItems {
+        width: 100%;
+        /* Align both image and text at the center of the div tag. */
+        text-align:center;
+    }
+
+    /* Setting apply to flex box item 1. */
+    .PDIAFlexboxItem1 {
+        margin-bottom: 10px;
+    }
+
+    /* Setting apply to flex box item 2, photo description area. */
+    .PDIAFlexboxItem2 {
+        margin-top: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        
+        /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 14pt;
+        background-color: rgba(244, 131, 19,.3);
+        color:black;
+
+        margin-bottom: 20px;
+    }
+
+    #PhotoPreview {
+        /* border: 5px solid rgba(169, 167, 165,.8); */
+        box-shadow: 6px 6px 5px gray;
+    }
+
+    #PhotoNavigationArea {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-bottom: 20px;
+        
+    }
+
+    /* .PNAAllFlexboxItems {
+        
+    } */
+
+    /* .PNAFlexboxItemN { 
+
+    } */
+
+    .NavButton, #SlideShowButton, #PrintButton, #LinkButton {
+        margin-right:10px;
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: white;
+        border: 1px solid rgba(244, 131, 19,.6);
+
+        color: rgba(244, 131, 19,1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+
+        cursor: pointer;
+    }
+
+    /* Change apperance when mouse move over. */
+    .NavButton:hover {
+        background-color: rgba(244, 131, 19,.4);
+        
+        color:black;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+    }
+
+    /* Appearance of the button when it is clicked. */
+    .ButtonDown {
+        color: white !important;
+        background-color: darkgray !important;
+        border: none;
+
+    }
+
+    /* Appaerance of the toggle slide show button when user click and active. */
+    .ToggleSlideButActive {
+        background-color: blue;
+        color: white;
+        border: none;
+    }
+
+    #TellUserToClickOnPhoto {
+        width: 70%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 10px;
+        font-style: italic;
+        text-decoration: underline;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+    }
+
+    #HowToPreviewPhoto{
+        width: 70%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 15px;
+        font-size:12pt;
+
+        list-style-type: disc;
+        
+    }
+
+    .ImportantPoint {
+        font-weight: bold;
+        color: rgba(244, 131, 19,1);
+    }
+
+    #PhotoCollection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 70%;
+        height: 350px;
+        overflow: auto;
+
+        background-color: rgba(169, 167, 165,.6);
+        margin: 0 auto;
+        align-items: center; /* Center item in horizontal alignment. */
+        justify-content: center; /* Center item in vertical alignment. */
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    /* Hide text description of photo for printer friendly. */
+    .TextDesForPrint {
+        display: none;
+    }
+
+    .PCAllFlexItems {
+        margin: 10px;
+    }
+
+    .PhotoThumbnails {
+        border: 3px solid white;
+    }
+
+    .PhotoThumbnails:hover {
+        border-color:#F48313;
+        cursor: pointer;
+
+        box-shadow: 8px 8px 8px rgb(97, 97, 255);
+    }
+
+    /* Thumbnails size of the photo with Panorama view. */
+    .PTPano {
+        width: 256px;
+        height: 90px;
+    }
+
+    /* Thumbnails size of the vertical photos. */
+    .PTVertical {
+        width: 128px;
+        height: 171px;
+    }
+
+    /* Thumnails size of the horizontal photos. */
+    .PTHorizontal {
+        width: 170px;
+        height: 128px;
+    }
+
+    #FooterArea {
+        margin-top: 20px;
+        /* Use pading left to make all content of footer located center of the page. */
+        padding-left: 150px;
+        height: 380px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        background-color:darkgray;
+
+    }
+
+    .FAAllFlexboxItems {
+        /* background-color: rgba(244, 131, 19,.3); */
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left:10px;
+
+        padding: 20px;
+        
+        width: 430px;
+        height: 330px;
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2 {
+        border-right: 2px solid white;
+    }
+
+    #InfoTitle, #ContactTitle, #ShareTitle {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        letter-spacing: 1px;
+        font-size: x-large;
+        color: white;
+
+        padding-bottom: 10px;
+    }
+
+    .FAFlexboxItem1 {
+        width: 400px;
+    }
+
+    .FAFlexboxItem1 ou {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+
+    .FAFlexboxItem1 li {
+        padding-left: 10px;
+        /* Use margin-bottom to achieve the line spacing purpose when working with
+        list item. */
+        margin-bottom: 5px;
+
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10.5pt;
+    }
+
+    /* Contat flex item. */
+    .FAFlexboxItem2 {
+        text-align: center;
+        width: 350px !important;
+    }
+
+    #ContactTelegramQRCode {
+        border: 3px solid white;
+        border-radius: 7px;
+        width: 170px;
+        height: auto;
+    }
+
+    #TlgLogo {
+        width: 25px;
+        height: 25px;
+        /* Use negative margin-bottom to bring down an image a little bit to make it in the
+        center of the text. */
+        margin-bottom: -6px;
+        /* Use filter drop shadown property to makea shadow for a transparent
+        images. */
+        filter: drop-shadow(0 0 5px white);
+    }
+
+    #HP, #Email {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10.5pt;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    #PrintButton, #LinkButton {
+        width: 150px !important;
+    }
+}
+
+/* --------------------------------------------------------------------------------- 
+CSS rules for:
+- Small monitor 14 inch (4:3 ratio).
+-----------------------------------------------------------------------------------*/
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-width: 992px;
+        background-color:#FFF8F1;
+
+    }
+
+    #WebBanner {
+        /* margin-top: 20px; */
+        margin-bottom: 20px;
+        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 75px;
+        text-align: center;
+        letter-spacing: 11px;
+        color: #F48313;
+        text-shadow: 4px 4px 8px black;
+
+        background-color:darkgray;
+
+    }
+    
+    /* Style of flex container for the preview image. 
+    and the photo description text. */
+    #PhotoDetailInfo {
+        /* background-color:blue; */
+
+        /* Make the div display flex in order to arrange photo into the middle of 
+        the page. */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 80%;
+        /* This below setting make the div of an image and text stay at the 
+        center of the webpage. */
+        margin: 0 auto;
+        
+    }
+
+    /* Setting apply to all flex box items. */
+    .PDIAllFlexboxItems {
+        /* width: 100%; */
+        /* Align both image and text at the center of the div tag. */
+        text-align:center;
+        
+    }
+
+    /* Setting apply to flex box item 1. */
+    .PDIAFlexboxItem1 {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    /* Setting apply to flex box item 2, photo description area. */
+    .PDIAFlexboxItem2 {
+        
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+        
+        /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12pt;
+        background-color: rgba(244, 131, 19,.3);
+        color:black;
+
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 85%;
+    }
+
+    #PhotoPreview {
+        /* border: 5px solid rgba(169, 167, 165,.8); */
+        width: 85%;
+        height: auto;
+        box-shadow: 6px 6px 5px gray;
+    }
+
+    #PhotoNavigationArea {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-top: 10px;
+        margin-bottom: 20px;
+        
+    }
+
+    /* .PNAAllFlexboxItems {
+        
+    } */
+
+    /* .PNAFlexboxItemN { 
+
+    } */
+
+    .NavButton, #SlideShowButton, #PrintButton, #LinkButton {
+        margin-right:10px;
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: white;
+        border: 1px solid rgba(244, 131, 19,.6);
+
+        color: rgba(244, 131, 19,1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+
+        cursor: pointer;
+    }
+
+    /* Change apperance when mouse move over. */
+    .NavButton:hover {
+        background-color: rgba(244, 131, 19,.4);
+        
+        color:black;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+    }
+
+    /* Appearance of the button when it is clicked. */
+    .ButtonDown {
+        color: white !important;
+        background-color: darkgray !important;
+        border: none;
+
+    }
+
+    /* Appaerance of the toggle slide show button when user click and active. */
+    .ToggleSlideButActive {
+        background-color: blue;
+        color: white;
+        border: none;
+    }
+
+    #TellUserToClickOnPhoto {
+        width: 80%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 10px;
+        font-style: italic;
+        text-decoration: underline;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+
+    }
+
+    #HowToPreviewPhoto{
+        width: 80%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 10px;
+        padding-left: 40px;
+        padding-right: 15px;
+        font-size:12pt;
+
+        list-style-type: disc;
+        
+    }
+
+    .ImportantPoint {
+        font-weight: bold;
+        color: rgba(244, 131, 19,1);
+    }
+
+    #PhotoCollection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 80%;
+        height: 350px;
+        overflow: auto;
+
+        background-color: rgba(169, 167, 165,.6);
+        margin: 0 auto;
+        align-items: center; /* Center item in horizontal alignment. */
+        justify-content: center; /* Center item in vertical alignment. */
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    /* Hide text description of photo for printer friendly. */
+    .TextDesForPrint {
+        display: none;
+    }
+
+    .PCAllFlexItems {
+        margin: 10px;
+    }
+
+    /* Last photo in the collection. */
+    .PCFlexItems16, .PCFlexItems17, .PCFlexItems18, .PCFlexItems19 {
+        padding-bottom: 20px;
+    }
+
+    .PhotoThumbnails {
+        border: 3px solid white;
+    }
+
+    .PhotoThumbnails:hover {
+        border-color:#F48313;
+        cursor: pointer;
+
+        box-shadow: 8px 8px 8px rgb(97, 97, 255);
+    }
+
+    /* Thumbnails size of the photo with Panorama view. */
+    .PTPano {
+        width: 256px;
+        height: 90px;
+    }
+
+    /* Thumbnails size of the vertical photos. */
+    .PTVertical {
+        width: 128px;
+        height: 171px;
+    }
+
+    /* Thumnails size of the horizontal photos. */
+    .PTHorizontal {
+        width: 170px;
+        height: 128px;
+    }
+
+    #FooterArea {
+        margin-top: 20px;
+        /* Use pading left to make all content of footer located center of the page. */
+        padding-left: 90px;
+        height: 380px;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+
+        background-color:darkgray;
+
+    }
+
+    .FAAllFlexboxItems {
+        /* background-color: rgba(244, 131, 19,.3); */
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left:10px;
+
+        padding: 20px;
+        
+        width: 500px;
+        height: 330px;
+
+        /* border-radius: 10px; */
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2 {
+        border-right: 2px solid white;
+    }
+
+    #InfoTitle, #ContactTitle, #ShareTitle {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        letter-spacing: 1px;
+        font-size: x-large;
+        color: white;
+
+        padding-bottom: 10px;
+    }
+
+    /* Information flex item. */
+    .FAFlexboxItem1 {
+        width: 450px;
+    }
+
+    .FAFlexboxItem1 ou {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+
+    .FAFlexboxItem1 li {
+    
+
+        padding-left: 10px;
+        /* Use margin-bottom to achieve the line spacing purpose when working with
+        list item. */
+        margin-bottom: 5px;
+
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10.5pt;
+    }
+
+    /* Contact flex item. */
+    .FAFlexboxItem2 {
+        text-align: center;
+        width: 350px !important;
+    }
+
+    #ContactTelegramQRCode {
+        border: 3px solid white;
+        border-radius: 7px;
+        width: 170px;
+        height: auto;
+    }
+
+    #TlgLogo {
+        width: 25px;
+        height: 25px;
+        /* Use negative margin-bottom to bring down an image a little bit to make it in the
+        center of the text. */
+        margin-bottom: -6px;
+        /* Use filter drop shadown property to makea shadow for a transparent
+        images. */
+        filter: drop-shadow(0 0 5px white);
+    }
+
+    #HP, #Email {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 10.5pt;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* Share flex item. */
+    .FAFlexboxItem3 {
+        width: 330px;
+        padding-left: 0 !important;
+    }
+
+    #PrintButton, #LinkButton {
+        width: 140px !important;
+    }
+
+}
+
+/* ---------------------------------------------------------------------------------
+CSS rules for:
+- Tablet (portrait and landscape), Web Browser: Google Chrome.
+----------------------------------------------------------------------------------*/
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-width: 768px;
+        background-color:#FFF8F1;
+        margin-left: 5px;
+    }
+
+    #WebBanner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 50pt;
+        letter-spacing: 6px;
+        text-align: center;
+        color: #F48313;
+        text-shadow: 4px 4px 8px black;
+
+        background-color:darkgray;
+        width: 100%;
+    }
+    
+    /* Style of flex container for the preview image. 
+    and the photo description text. */
+    #PhotoDetailInfo {
+        /* background-color:blue; */
+
+        /* Make the div display flex in order to arrange photo into the middle of 
+        the page. */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* width: 100%; */
+        /* This below setting make the div of an image and text stay at the 
+        center of the webpage. */
+        margin: 0 auto;
+        
+    }
+
+    /* Setting apply to all flex box items. */
+    .PDIAllFlexboxItems {
+        width: 100%;
+        /* Align both image and text at the center of the div tag. */
+        text-align:center;
+        
+    }
+
+    /* Setting apply to flex box item 1. */
+    .PDIAFlexboxItem1 {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    /* Setting apply to flex box item 2, photo description area. */
+    .PDIAFlexboxItem2 {
+        
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+        
+        /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 18pt;
+        background-color: rgba(244, 131, 19,.3);
+        color:black;
+
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #PhotoPreview {
+        /* border: 5px solid rgba(169, 167, 165,.8); */
+        width: 100%;
+        height: auto;
+    }
+
+    #PhotoNavigationArea {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-top: 10px;
+        margin-bottom: 40px;
+        
+    }
+
+    /* .PNAAllFlexboxItems {
+        
+    } */
+
+    /* .PNAFlexboxItemN { 
+
+    } */
+
+    .NavButton, #SlideShowButton, #PrintButton, #LinkButton {
+        margin-right:10px;
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: white;
+        border: 4px solid rgba(244, 131, 19,.6);
+
+        color: rgba(244, 131, 19,1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: 16pt;
+
+        cursor: pointer;
+    }
+
+    /* Change apperance when mouse move over. */
+    .NavButton:hover {
+        background-color: rgba(244, 131, 19,.4);
+        
+        color:black;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+    }
+
+    /* Appearance of the button when it is clicked. */
+    .ButtonDown {
+        color: white !important;
+        background-color: darkgray !important;
+        border: none;
+    }
+
+    /* Appaerance of the toggle slide show button when user click and active. */
+    .ToggleSlideButActive {
+        background-color: blue;
+        border-width: 8px solid blue;
+        color: white;
+        border: none;
+    }
+
+    #TellUserToClickOnPhoto {
+        width: 100%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 10px;
+        font-style: italic;
+        font-size: 16pt;
+        text-decoration: underline;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    #HowToPreviewPhoto{
+        width: 100%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 10px;
+        padding-left: 70px;
+        padding-right: 15px;
+        font-size: 16pt;
+
+        list-style-type: disc;
+    }
+
+    .ImportantPoint {
+        font-weight: bold;
+        color: rgba(244, 131, 19,1);
+    }
+
+    #PhotoCollection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 100%;
+        height: 800px;
+        overflow: scroll;
+
+        background-color: rgba(169, 167, 165,.6);
+        margin: 0 auto;
+        align-items: center; /* Center item in horizontal alignment. */
+        justify-content: center; /* Center item in vertical alignment. */
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    /* Hide text description of photo for printer friendly. */
+    .TextDesForPrint {
+        display: none;
+    }
+
+    .PCAllFlexItems {
+        margin: 10px;
+    }
+
+    /* Second photo in the collection. */
+    .PCFlexItems2 {
+        padding-top: 20px;
+    }
+
+    /* Last photo in the collection. */
+    .PCFlexItems19 {
+        padding-bottom: 20px;
+    }
+
+    .PhotoThumbnails {
+        border: 5px solid white;
+    }
+
+    .PhotoThumbnails:hover {
+        border-color:#F48313;
+        cursor: pointer;
+
+        box-shadow: 8px 8px 8px rgb(97, 97, 255);
+    }
+
+    /* Thumbnails size of the photo with Panorama view. */
+    .PTPano {
+        width: 360px; /* 256px */
+        height: auto; /* 90px */
+    }
+
+    /* Thumbnails size of the vertical photos. */
+    .PTVertical {
+        width: 240px; /* 128px */
+        height: auto; /* 171px */
+    }
+
+    /* Thumnails size of the horizontal photos. */
+    .PTHorizontal {
+        width: 300px; /* 170px */
+        height: auto; /* 128px */
+    }
+
+    #FooterArea {
+        margin-top: 20px;
+        /* Use pading left to make all content of footer located center of the page. */
+        /* padding-left: 90px; */
+        width: 100%;
+        height: auto;
+
+        display: inline-block;
+        /* flex-direction: row; */
+        /* flex-wrap: nowrap; */
+        /* justify-content: center; */
+
+        background-color:darkgray;
+
+    }
+
+    .FAAllFlexboxItems {
+        /* background-color: rgba(244, 131, 19,.3); */
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left:10px;
+
+        padding: 20px;
+        
+        width: 100%;
+        height: auto;
+
+        /* border-radius: 10px; */
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2 {
+        border-bottom: 2px solid white;
+    }
+
+    #InfoTitle, #ContactTitle, #ShareTitle {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        letter-spacing: 1px;
+        font-size: 24pt;
+        color: white;
+
+        padding-bottom: 10px;
+    }
+
+    .FAFlexboxItem1 ou {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+
+    .FAFlexboxItem1 li {
+        padding-left: 10px;
+        /* Use margin-bottom to achieve the line spacing purpose when working with
+        list item. */
+        margin-bottom: 5px;
+
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16pt;
+        text-align: left !important;
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2, .FAFlexboxItem3 {
+        text-align: center;
+    }
+
+    /* Telegram QR code. */
+    #ContactTelegramQRCode {
+        border: 3px solid white;
+        border-radius: 7px;
+        width: 480px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Small telegram logo appearance. */
+    #TlgLogo {
+        width: 40px;
+        height: auto; /* 25px */
+        /* Use negative margin-bottom to bring down an image a little bit to make it in the
+        center of the text. */
+        margin-bottom: -12.5px;
+        /* Use filter drop shadown property to makea shadow for a transparent
+        images. */
+        filter: drop-shadow(0 0 15px white);
+    }
+
+    #HP, #Email {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 16pt;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* Print and Link button apperance. */
+    #PrintButton, #LinkButton {
+        width: 300px !important;
+        height: 50px;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+CSS rules for:
+- Smartphone (portrait and landscape).
+------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-width: 992px;
+        background-color:#FFF8F1;
+
+    }
+
+    #WebBanner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 85pt;
+        text-align: center;
+        color: #F48313;
+        text-shadow: 4px 4px 8px black;
+
+        background-color:darkgray;
+
+    }
+    
+    /* Style of flex container for the preview image. 
+    and the photo description text. */
+    #PhotoDetailInfo {
+        /* background-color:blue; */
+
+        /* Make the div display flex in order to arrange photo into the middle of 
+        the page. */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        /* width: 80%; */
+        /* This below setting make the div of an image and text stay at the 
+        center of the webpage. */
+        margin: 0 auto;
+        
+    }
+
+    /* Setting apply to all flex box items. */
+    .PDIAllFlexboxItems {
+        width: 100%;
+        /* Align both image and text at the center of the div tag. */
+        text-align:center;
+        
+    }
+
+    /* Setting apply to flex box item 1. */
+    .PDIAFlexboxItem1 {
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+
+    /* Setting apply to flex box item 2, photo description area. */
+    .PDIAFlexboxItem2 {
+        
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 10px;
+		padding-right: 10px;
+        
+        /* text-align: center; */
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 48pt;
+        background-color: rgba(244, 131, 19,.3);
+        color:black;
+
+        margin: 0 auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    #PhotoPreview {
+        /* border: 5px solid rgba(169, 167, 165,.8); */
+        width: 100%;
+        height: auto;
+    }
+
+    #PhotoNavigationArea {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        margin-top: 10px;
+        margin-bottom: 40px;
+        
+    }
+
+    /* .PNAAllFlexboxItems {
+        
+    } */
+
+    /* .PNAFlexboxItemN { 
+
+    } */
+
+    .NavButton, #SlideShowButton, #PrintButton, #LinkButton {
+        margin-right:10px;
+        margin-left: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: white;
+        border: 8px solid rgba(244, 131, 19,.6);
+
+        color: rgba(244, 131, 19,1);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+        font-size: 40pt;
+
+        cursor: pointer;
+    }
+
+    /* Change apperance when mouse move over. */
+    .NavButton:hover {
+        background-color: rgba(244, 131, 19,.4);
+        
+        color:black;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-weight: bolder;
+    }
+
+    /* Appearance of the button when it is clicked. */
+    .ButtonDown {
+        color: white !important;
+        background-color: darkgray !important;
+        border: none;
+    }
+
+    /* Appaerance of the toggle slide show button when user click and active. */
+    .ToggleSlideButActive {
+        background-color: blue;
+        border-width: 8px solid blue;
+        color: white;
+        border: none;
+    }
+
+    #TellUserToClickOnPhoto {
+        width: 100%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: black;
+        padding: 10px;
+        font-style: italic;
+        font-size: 44pt;
+        text-decoration: underline;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    #HowToPreviewPhoto{
+        width: 100%;
+        margin: 0 auto;
+
+        background-color: rgba(67,187,255,.3);
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding-bottom: 10px;
+        padding-left: 70px;
+        padding-right: 15px;
+        font-size: 44pt;
+
+        list-style-type: disc;
+    }
+
+    .ImportantPoint {
+        font-weight: bold;
+        color: rgba(244, 131, 19,1);
+    }
+
+    #PhotoCollection {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        width: 100%;
+        height: 1400px;
+        overflow: scroll;
+
+        background-color: rgba(169, 167, 165,.6);
+        margin: 0 auto;
+        align-items: center; /* Center item in horizontal alignment. */
+        justify-content: center; /* Center item in vertical alignment. */
+
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    /* Hide text description of photo for printer friendly. */
+    .TextDesForPrint {
+        display: none;
+    }
+
+    .PCAllFlexItems {
+        margin: 10px;
+    }
+
+    /* Second photo in the collection. */
+    .PCFlexItems2 {
+        padding-top: 20px;
+    }
+
+    /* Last photo in the collection. */
+    .PCFlexItems19 {
+        padding-bottom: 20px;
+    }
+
+    .PhotoThumbnails {
+        border: 10px solid white;
+    }
+
+    .PhotoThumbnails:hover {
+        border-color:#F48313;
+        cursor: pointer;
+
+        box-shadow: 8px 8px 8px rgb(97, 97, 255);
+    }
+
+    /* Thumbnails size of the photo with Panorama view. */
+    .PTPano {
+        width: 512px; /* 256px */
+        height: auto; /* 90px */
+    }
+
+    /* Thumbnails size of the vertical photos. */
+    .PTVertical {
+        width: 356px; /* 128px */
+        height: auto; /* 171px */
+    }
+
+    /* Thumnails size of the horizontal photos. */
+    .PTHorizontal {
+        width: 440px; /* 170px */
+        height: auto; /* 128px */
+    }
+
+    #FooterArea {
+        margin-top: 20px;
+        /* Use pading left to make all content of footer located center of the page. */
+        /* padding-left: 90px; */
+        width: 100%;
+        height: auto;
+
+        display: inline-block;
+        /* flex-direction: row; */
+        /* flex-wrap: nowrap; */
+        /* justify-content: center; */
+
+        background-color:darkgray;
+
+    }
+
+    .FAAllFlexboxItems {
+        /* background-color: rgba(244, 131, 19,.3); */
+
+        margin-top: 20px;
+        margin-bottom: 20px;
+        margin-right: 10px;
+        margin-left:10px;
+
+        padding: 20px;
+        
+        width: 100%;
+        height: auto;
+
+        /* border-radius: 10px; */
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2 {
+        border-bottom: 2px solid white;
+    }
+
+    #InfoTitle, #ContactTitle, #ShareTitle {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        letter-spacing: 1px;
+        font-size: 48pt;
+        color: white;
+
+        padding-bottom: 10px;
+    }
+
+    .FAFlexboxItem1 ou {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+
+    .FAFlexboxItem1 li {
+        padding-left: 10px;
+        /* Use margin-bottom to achieve the line spacing purpose when working with
+        list item. */
+        margin-bottom: 5px;
+
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 44pt;
+        text-align: left !important;
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2, .FAFlexboxItem3 {
+        text-align: center;
+    }
+
+    /* Telegram QR code. */
+    #ContactTelegramQRCode {
+        border: 3px solid white;
+        border-radius: 7px;
+        width: 720px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    /* Small telegram logo appearance. */
+    #TlgLogo {
+        width: 90px;
+        height: auto; /* 25px */
+        /* Use negative margin-bottom to bring down an image a little bit to make it in the
+        center of the text. */
+        margin-bottom: -20px;
+        /* Use filter drop shadown property to makea shadow for a transparent
+        images. */
+        filter: drop-shadow(0 0 15px white);
+    }
+
+    #HP, #Email {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 44pt;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* Print and Link button apperance. */
+    #PrintButton, #LinkButton {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 600px !important;
+    }
+}
+
+/* ----------------------------------------------------------------------------------
+Styling for:
+- Printing document.
+------------------------------------------------------------------------------------*/
+@media print {
+    @page {
+        size: A4 portrait;
+        margin-top: 2cm;
+        margin-bottom: 2cm;
+        margin-left: 2cm;
+        margin-right: 2cm;
+
+    }
+
+    #WebBanner {
+        margin-bottom: 30px;
+        
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 40pt;
+        text-align: center;
+        text-decoration: underline;
+        color: #F48313;
+    }
+
+    /* Hide the slide show photo, text description, navigation button,
+    navigation instruction and share section from the printer friendly version. */
+    #PhotoPreview, #PhotoDesText, #PrevBut, #NextBut, #ToggleSlideBut, 
+    #TellUserToClickOnPhoto, #HowToPreviewPhoto, .FAFlexboxItem3 {
+        display: none;
+    }
+
+    #PhotoCollection {
+        display: flex; /* flex*/
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .TextDesForPrint {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 11pt;
+        color: black;
+        text-align: left;
+        padding: 15px;
+
+        width: 400px;
+        height: auto;
+        border: 1px solid #F48313;
+        border-radius: 7px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+
+        /* Use transform translateX CSS property to move the whole paragraph to the
+        right or center of the div tag. */
+        transform: translateX(45%);
+    }
+
+    .PTPano {
+        width: 100%;
+    }
+
+    .PTVertical {
+        width: 60%;
+    }
+
+    .PTHorizontal {
+        width: 90%;
+    }
+
+    .PhotoThumbnails {
+        /* Use margin-top setting on the photo to avoid the photo border show on the
+        bottom of the top page. */
+        margin-top: 10px;
+        height: auto;
+        border: 4px solid #F48313;
+    }
+
+    .PCAllFlexItems {
+        /* Align the photo at the center of the page. */
+        text-align: center;
+    }
+    .PCFlexItems3, .PCFlexItems5, .PCFlexItems7, .PCFlexItems9, .PCFlexItems11, 
+    .PCFlexItems13, .PCFlexItems15, .PCFlexItems15, .PCFlexItems17, .PCFlexItems19 {
+        /* Always move the block of photo and its description to the new page. */
+        page-break-before: always;
+    }
+
+    #FooterArea {
+        margin-top: 10px;
+
+        width: 100%;
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    .FAAllFlexboxItems {
+        margin-right: 10px;
+        margin-left:10px;
+
+        padding: 20px;
+        height: auto;
+    }
+
+    #InfoTitle, #ContactTitle {
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 18pt;
+        color: #F48313;
+        padding-bottom: 10px;
+    }
+
+    .FAFlexboxItem1 ou {
+        list-style-type: disc;
+        list-style-position: outside;
+    }
+
+    .FAFlexboxItem1 li {
+        padding-left: 10px;
+        /* Use margin-bottom to achieve the line spacing purpose when working with
+        list item. */
+        margin-bottom: 5px;
+
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12pt;
+        text-align: left !important;
+    }
+
+    .FAFlexboxItem1, .FAFlexboxItem2 {
+        text-align: center;
+    }
+
+    /* Telegram QR code. */
+    #ContactTelegramQRCode {
+        border: 3px solid #F48313;
+        border-radius: 20px;
+        width: 160px;
+        height: auto;
+        /* margin-bottom: 10px; */
+    }
+
+    /* Small telegram logo appearance. */
+    #TlgLogo {
+        width: 20px;
+        height: auto; /* 25px */
+        /* Use negative margin-bottom to bring down an image a little bit to make it in the
+        center of the text. */
+        margin-bottom: -5px;
+    }
+
+    #HP, #Email {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12pt;
+        padding-top: 2px;
+        padding-bottom: 2px;
+    }
+
+    /* Don't add any content after email links */
+    a[href^="mailto:"]::after {
+        content: "";
+    }
+
+    /* Add the URL after the link.  */
+    a:after {
+        content: " (" attr(href) ") ";
+    }
+
+}
